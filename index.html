@@ -2,6 +2,29 @@
 <html>
 <head>
     <title>语音识别示例</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 1.5rem;
+        }
+        button {
+            font-size: 1rem;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #output {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>语音识别示例</h1>
@@ -16,8 +39,8 @@
         if ('webkitSpeechRecognition' in window) {
             const recognition = new webkitSpeechRecognition();
 
-            // 设置语言为英语（可以根据需要更改）
-            recognition.lang = 'en-US';
+            // 设置语言为简体中文
+            recognition.lang = 'zh-CN';
 
             // 在识别到语音时触发此事件
             recognition.onresult = (event) => {
